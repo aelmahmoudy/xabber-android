@@ -1,5 +1,7 @@
 package com.xabber.android.ui.adapter;
 
+import android.content.res.TypedArray;
+import android.util.TypedValue;
 import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
@@ -95,7 +97,7 @@ public class ContactItemInflater {
                 viewHolder.outgoingMessageIndicator.setTextColor(accountMainColors[colorLevel]);
 
             }
-            view.setBackgroundColor(context.getResources().getColor(R.color.grey_50));
+            setBackgroundColor(view, R.attr.activeChatBackground);
             viewHolder.smallRightIcon.setImageResource(R.drawable.ic_client_small);
             viewHolder.smallRightIcon.setVisibility(View.VISIBLE);
             viewHolder.smallRightIcon.setImageLevel(clientSoftware.ordinal());
@@ -103,7 +105,7 @@ public class ContactItemInflater {
         } else {
             statusText = contact.getStatusText().trim();
             viewHolder.smallRightText.setVisibility(View.GONE);
-            view.setBackgroundColor(context.getResources().getColor(R.color.grey_300));
+            setBackgroundColor(view, R.attr.nonActiveChatBackground);
             viewHolder.smallRightIcon.setVisibility(View.GONE);
             viewHolder.largeClientIcon.setVisibility(View.VISIBLE);
             viewHolder.largeClientIcon.setImageLevel(clientSoftware.ordinal());
@@ -118,6 +120,13 @@ public class ContactItemInflater {
 
         viewHolder.statusIcon.setImageLevel(contact.getStatusMode().getStatusLevel());
         return view;
+    }
+
+    private void setBackgroundColor(View view, int colorAttribute) {
+        TypedArray a = context.obtainStyledAttributes(new int[] {colorAttribute});
+        int attributeResourceId = a.getResourceId(0, 0);
+        a.recycle();
+        view.setBackgroundColor(context.getResources().getColor(attributeResourceId));
     }
 
     private void onAvatarClick(AbstractContact contact) {
