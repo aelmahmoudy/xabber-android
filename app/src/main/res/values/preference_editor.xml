@@ -45,7 +45,7 @@
     <!-- http://dl.dropbox.com/u/1029995/com.xabber.android/preference_editor_appearance_skin.png -->
     <string name="interface_theme_dark">Dark</string>
     <!-- http://dl.dropbox.com/u/1029995/com.xabber.android/preference_editor_appearance_skin.png -->
-    <string name="interface_theme_light">Light</string>
+    <string name="interface_theme_transparent">Transparent</string>
     <!-- http://dl.dropbox.com/u/1029995/com.xabber.android/preference_editor_appearance_skin.png -->
     <string name="interface_theme_normal">Default</string>
     <!-- http://dl.dropbox.com/u/1029995/com.xabber.android/preference_editor_appearance.png -->

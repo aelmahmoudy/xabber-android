@@ -464,8 +464,8 @@ public class SettingsManager implements OnInitializedListener,
                 .getString(R.string.interface_theme_dark_value).equals(value))
             return InterfaceTheme.dark;
         else if (Application.getInstance()
-                .getString(R.string.interface_theme_light_value).equals(value))
-            return InterfaceTheme.light;
+                .getString(R.string.interface_theme_transparent_value).equals(value))
+            return InterfaceTheme.transparent;
         else if (Application.getInstance()
                 .getString(R.string.interface_theme_normal_value).equals(value))
             return InterfaceTheme.normal;
@@ -663,9 +663,9 @@ public class SettingsManager implements OnInitializedListener,
         dark,
 
         /**
-         * All windows will be light.
+         * All windows will be transparent.
          */
-        light,
+        transparent,
 
         /**
          * Chat will be light, other windows will be dark.

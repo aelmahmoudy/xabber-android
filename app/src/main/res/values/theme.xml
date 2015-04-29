@@ -48,4 +48,28 @@
     <style name="ToolbarTitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
         <item name="android:textSize">17sp</item>
     </style>
+    <style name="TransparentTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowShowWallpaper">true</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+
+        <!--for text selection toolbar to be above usual toolbar -->
+        <item name="windowActionModeOverlay">true</item>
+
+        <!-- for hardware button menu -->
+        <item name="panelBackground">?attr/colorPrimary</item>
+
+        <item name="inputLayoutBackground">@android:color/transparent</item>
+        <item name="toolbarPopupTheme">@style/ThemeOverlay.AppCompat</item>
+        <item name="drawerBackground">@android:color/transparent</item>
+        <item name="activeChatBackground">@android:color/transparent</item>
+        <item name="nonActiveChatBackground">@android:color/transparent</item>
+        <item name="contactListBackground">@android:color/transparent</item>
+    </style>
 </resources>

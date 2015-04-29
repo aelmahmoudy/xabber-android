@@ -123,6 +123,8 @@ public class ActivityManager implements OnUnloadListener {
         SettingsManager.InterfaceTheme theme = SettingsManager.interfaceTheme();
         if(theme.equals(SettingsManager.InterfaceTheme.dark))
           activity.setTheme(R.style.DarkTheme);
+        else if(theme.equals(SettingsManager.InterfaceTheme.transparent))
+          activity.setTheme(R.style.TransparentTheme);
         else
           activity.setTheme(R.style.Theme);
     }
